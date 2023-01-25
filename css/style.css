@@ -1,0 +1,30 @@
+/* styled using tags */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* styled using id */
+image1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* style using class */
+image2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 50%
+
+}
