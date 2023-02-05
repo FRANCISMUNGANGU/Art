@@ -1,71 +1,247 @@
 <!DOCTYPE html>
-<html>
-<!--for putting meta data: more info on element-->
+<html lang="en">
 <head>
-<!--    link to styling elements-->
-<!--    styling elements include href and rel-->
-<link href="css/style.css" rel="stylesheet">
-    <title>Art homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+<!--  internal css-->
+  <style>
+
+#item1 {
+
+  grid-area: item1;
+      padding: 10px;
+      margin: 10px
+    }
+
+    #item2 {
+      grid-area: item2;
+      padding: 10px;
+      margin: 10px
+    }
+    #item3 {
+      grid-area: item3;
+      padding: 10px;
+      margin: 10px
+    }
+    .item4 {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+      grid-area: item4;
+      padding: 10px;
+      margin: 10px
+    }
+
+    .item4 >div {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #item5 {
+      grid-area: item5;
+      padding: 10px;
+      margin: 10px
+    }
+    #item6 {
+      grid-area: item6;
+      padding: 10px;
+      margin: 10px
+    }
+    #item7 {
+      grid-area: item7;
+      padding: 10px;
+      margin: 10px
+    }
+
+
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+         'item1 item2 item2 item2 item2 item2 item2'
+         'item3 item4 item4 item4 item4 item4 item5'
+         'item6 item6 item6 item6 item6 item6 item6'
+         'item7 item7 item7 item7 item7 item7 item7'
+
+    ;
+    }
+     @media only screen and (max-width: 600px) {
+         /*inside this i can add my css rules*/
+         .grid-container {
+             display: grid;
+             grid-template-areas:
+         'item1 item2 item2 item2 item2 item2 item2'
+         'item3 item3 item3 item3 item3 item3 item3'
+         'item4 item4 item4 item4 item4 item4 item4'
+         'item5 item5 item5 item5 item5 item5 item5'
+        'item6 item6 item6 item6 item6 item6 item6'
+        'item7 item7 item7 item7 item7 item7 item7';
+         }
+         .item4 {
+             display: flex;
+             flex-direction: column;
+         }
+     }
+
+
+  </style>
+    <link rel="stylesheet" href="css/style.css">
+<!--    Linking bootstrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
 </head>
 <body>
+<!--overall container for grid-->
+<div class="grid-container">
+<!--  partitions for your page-->
+<!--  color mapping:display my grid before adding content-->
+  <div id="item1">
 
-<p>Hello world.</p>
-<!--internal link-->
-<a href="public/about.html">Internal link : Go to about.html</a>
-<!--external link-->
-<a href="http://www.google.com" target="_blank">External link : Goes to other hosted websites</a>
-<h1>heading</h1>
-<h2>heading</h2>
-<h3>heading</h3>
-<h4>headind</h4>
-<h5>heading</h5>
-<h6>heading</h6>
+      <img src="assests/img.png" height="100" width="100"/></div>
+      <div id="item2">
+          <!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm justify-content-center">
 
-<!--ordered list-->
-<ol>
-    <h4>Premier league</h4>
-<li><a href="http://www.arsenal.com">Arsenal</a></li>
-<li>Man city</li>
-    <li>Man United</li>
-</ol>
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Book showcase</a>
+      </li>
 
-<ul>
-    <li>Kale</li>
-    <li>Onion</li>
-    <li>Tomatoes</li>
+    </ul>
+  </div>
+
+</nav>
+      </div>
+
+
+  <div id="item3">
+      <nav class="navbar justify-content-center">
+
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <h4>Cartegories</h4>
+          </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Sport art</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Paintings</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Pencil drawings</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Sculptures</a>
+      </li>
+
+        <img src="assests/img.png" height="200" width="200"/></ul>
+  </div>
+
+</nav>
+
+
+
+  </div>
+  <div class="item4">
+      <div id="flex1">
+
+          <div class="card" style="width:400px">
+
+
+              <img class="card-img-top" src="assests/img.png" />
+
+
+              <div class="card-body">
+    <h4 class="card-title">Art piece 1</h4>
+    <p class="card-text">Some example text.</p>
+    <a href="#" class="btn btn-warning">Purchase art</a>
+  </div>
+</div>
+</div>
+      </div>
+      <div id="flex2">
+
+          <div class="card" style="width:400px">
+
+
+              <img class="card-img-top" src="assests/img.png" />
+
+
+              <div class="card-body">
+    <h4 class="card-title">Art piece 1</h4>
+    <p class="card-text">Some example text.</p>
+    <a href="#" class="btn btn-warning">Purchase art</a>
+  </div>
+</div>
+      </div>
+  </div>
+  <div id="item5">
+      <div class="alert alert-danger">Notifications</div>
+      <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between list-group-item-success align-items-center">
+    Your Inbox
+    <span class="badge bg-primary rounded-pill">12</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between list-group-item-warning align-items-center">
+    Your Cart
+    <span class="badge bg-primary rounded-pill">4</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Profile settings
+    <span class="badge bg-primary rounded-pill">2</span>
+  </li>
 </ul>
-    <img src="assests/img.png" width="200" height="200"/>
- <table>
-<thead>
-<tr>
-    <th>Name</th>
-    <th>ID Number</th>
-    <th>D.O.B</th>
-    <th>Age</th>
-</tr>
-</thead>
-     <tbody>
-     <tr>
-         <td>Francis</td>
-         <td>xxxxxxx</td>
-         <td>20th November</td>
-         <td>18</td>
-     </tr>
-     <tr>
-         <td>Rambo</td>
-         <td>xxxxxxx</td>
-         <td>20th November</td>
-         <td>18</td></tr>
-     </tbody>
-     <tr>
-         <td>Big fish</td>
-         <td>xxxxxxx</td>
-         <td>20th November</td>
-         <td>18</td></tr>
-
- </table>
 
 
+
+  </div>
+  <div id="item6">
+      <div class="alert alert-success">
+          Our slogan
+      </div>
+      Fill the form below.</div>
+  <div id="item7">
+      <div class="alert alert-info">
+          Contact us
+
+      <form>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="message">message:</label>
+    <textarea type="text" class="form-control" id="message" rows="10" cols="10"></textarea>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+
+
+</div>
 
 
 </body>

@@ -1,0 +1,70 @@
+<!--for putting meta data: more info on element-->
+<head>
+<!--    link to styling elements-->
+<!--    styling elements include href and rel-->
+<link href="css/style.css" rel="stylesheet">
+    <title>Art homepage</title>
+</head>
+<body>
+
+<p>Hello world.</p>
+<!--internal link-->
+<a href="public/about.html">Internal link : Go to about.html</a>
+<!--external link-->
+<a href="http://www.google.com" target="_blank">External link : Goes to other hosted websites</a>
+<h1>heading</h1>
+<h2>heading</h2>
+<h3>heading</h3>
+<h4>headind</h4>
+<h5>heading</h5>
+<h6>heading</h6>
+
+<!--ordered list-->
+<ol>
+    <h4>Premier league</h4>
+<li><a href="http://www.arsenal.com">Arsenal</a></li>
+<li>Man city</li>
+    <li>Man United</li>
+</ol>
+
+<ul>
+    <li>Kale</li>
+    <li>Onion</li>
+    <li>Tomatoes</li>
+</ul>
+    <img src="assests/img.png" width="200" height="200"/>
+ <table>
+<thead>
+<tr>
+    <th>Name</th>
+    <th>ID Number</th>
+    <th>D.O.B</th>
+    <th>Age</th>
+</tr>
+</thead>
+     <tbody>
+     <tr>
+         <td>Francis</td>
+         <td>xxxxxxx</td>
+         <td>20th November</td>
+         <td>18</td>
+     </tr>
+     <tr>
+         <td>Rambo</td>
+         <td>xxxxxxx</td>
+         <td>20th November</td>
+         <td>18</td></tr>
+     </tbody>
+     <tr>
+         <td>Big fish</td>
+         <td>xxxxxxx</td>
+         <td>20th November</td>
+         <td>18</td></tr>
+
+ </table>
+
+
+
+
+</body>
+</html>
